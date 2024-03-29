@@ -30,7 +30,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           
     - name: Start container
-      run: docker run  -p 5001:5001 -d 8447756042/livedemo:latest
+      run: docker run  -p 5001:5001 -d siri098/githubdemo:latest
       
     - name:  check container status
       run: docker container ps -a
