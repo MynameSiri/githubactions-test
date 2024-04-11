@@ -28,7 +28,7 @@ jobs:
       with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-     #Added azure login     
+     #Added Azure login     
     - name: 'Az CLI login'
       uses: azure/login@v1
       with:
