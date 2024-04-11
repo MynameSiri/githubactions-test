@@ -35,10 +35,10 @@ on:
   workflow_dispatch:
 
 env:
-  AZURE_CONTAINER_REGISTRY: "your-azure-container-registry"
-  CONTAINER_NAME: "your-container-name"
-  RESOURCE_GROUP: "your-resource-group"
-  CLUSTER_NAME: "your-cluster-name"
+  AZURE_CONTAINER_REGISTRY: "githubpocacr.azurecr.io"
+  CONTAINER_NAME: "githubpoc"
+  RESOURCE_GROUP: "githubactionpoc"
+  CLUSTER_NAME: "myAKSClusterpoc"
   DEPLOYMENT_MANIFEST_PATH: "your-deployment-manifest-path"
 
 jobs:
