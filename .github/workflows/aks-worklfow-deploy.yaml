@@ -18,8 +18,8 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-    ##- name: Set up Kubectl
-    # uses: azure/setup-kubectl@v1
+    - name: Set up Kubectl
+      uses: azure/setup-kubectl@v1
 
     - name: Connect to AKS
       run: az aks get-credentials --name myAKSClusterpoc --resource-group githubactionpoc --overwrite-existing
