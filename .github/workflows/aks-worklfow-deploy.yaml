@@ -18,7 +18,14 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-    - name: Deploy SPA
-      run: |
-        # Use Azure CLI commands to deploy your SPA
-        az account show
+    - name: Set up Kubectl
+      uses: azure/setup-kubectl@v1
+
+    - name: Connect to AKS
+      run: az aks get-credentials --name myAKSClusterpoc --resource-group githubactionpoc --overwrite-existing
+
+    - name: Deploy to AKS
+      run: kubectl apply -f ../nginx-deployment.yaml
+
+    - name: List pods
+      run: kubectl get pods
